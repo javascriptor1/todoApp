@@ -16,7 +16,13 @@ document.getElementById('addItem').addEventListener('click',function(){
         addItemTodo(value);
         document.getElementById('item').value = '';
     } else {
-        alert('Please enter a task todo')
+        Swal.fire({
+            title: 'Error!',
+            text: 'You have not entered any tasks to do. !',
+            icon: 'error',
+            confirmButtonText: 'OK',
+            width: 355
+          })
     }
 })
 
